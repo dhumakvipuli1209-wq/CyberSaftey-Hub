@@ -1,98 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cyber Challenge</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Detective Challenge | Cyber Safety Hub</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
-
-<header>
-<nav class="navbar">
-<h1>🛡️ CyberShield</h1>
-
-<div class="nav-links">
-<a href="index.html">Home</a>
-<a href="cybercrimes.html">Cybercrimes</a>
-<a href="prevention.html">Prevention</a>
-<a href="game.html">Game</a>
-<a href="quiz.html">Quiz</a>
-<a href="survey.html">Survey</a>
-</div>
-</nav>
-</header>
-
-<section class="page-header">
-<h2>🕵️ Cyber Detective Challenge</h2>
-<p>Identify the safest action in each situation.</p>
-</section>
-
-<section class="question-box">
-
-<h3 id="question"></h3>
-
-<div id="options"></div>
-
-<div id="result" class="result"></div>
-
-<button  id="nextButton" onclick="nextQuestion()" class="btn primary>"
-    Next Challenge
-</button>
-
-</section>
-
-<script src="../js/game.js">
-    let currentQuestion = 0;
-let correctAnswers = 0;
-let wrongAnswers = 0;
-
-const questions = [
-    {
-        question: "You receive a message saying: 'Congratulations! You won ₹50,000. Click this link to claim your prize.' What should you do?",
-        options: [
-            "Click the link immediately",
-            "Share the message with friends",
-            "Ignore it and verify the offer through an official source",
-            "Enter your bank details"
-        ],
-        answer: 2
-    },
-
-    {
-        question: "Someone asks for your OTP on a phone call. What should you do?",
-        options: [
-            "Give the OTP",
-            "Share only the last 2 digits",
-            "Never share the OTP",
-            "Ask them why they need it"
-        ],
-        answer: 2
-    },
-
-    {
-        question: "You receive an unknown email attachment. What is the safest action?",
-        options: [
-            "Open it immediately",
-            "Download it and check later",
-            "Ignore/delete it or verify the sender first",
-            "Forward it to friends"
-        ],
-        answer: 2
-    }
-];
-</script>
-<div id="quizResult" style="display:none;">
-    <h2>🎉 Quiz Completed!</h2>
-
-    <p>✅ Correct Answers: <span id="correctCount">0</span></p>
-    <p>❌ Wrong Answers: <span id="wrongCount">0</span></p>
-    <p>📊 Total Score: <span id="finalScore">0</span></p>
-    <p>🎯 Percentage: <span id="percentage">0</span>%</p>
-
-    <button onclick="restartQuiz()">🔄 Try Again</button>
-</div>
-
+  <header>
+    <nav class="navbar">
+      <h1>🛡️ Cyber Safety Hub</h1>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="cybercrimes.html">Cybercrimes</a>
+        <a href="prevention.html">Prevention</a>
+        <a href="scams.html">Scams</a>
+        <a href="game.html">Game</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="workshop.html">Workshop</a>
+      </div>
+    </nav>
+  </header>
+  <section class="page-header">
+    <h2>🕵️ Cyber Detective Challenge</h2>
+    <p>Choose the safest action in each situation.</p>
+  </section>
+  <main class="question-box">
+    <p id="score" aria-live="polite"></p>
+    <h3 id="question"></h3>
+    <div id="options" class="options"></div>
+    <p id="feedback" class="result" aria-live="polite"></p>
+    <button id="nextButton" class="btn primary" type="button" onclick="nextQuestion()">Next Challenge</button>
+  </main>
+  <footer><p>© 2026 Cyber Safety Hub | Cybercrime Awareness &amp; Prevention Workshop</p></footer>
+  <script src="../js/game.js"></script>
 </body>
 </html>
