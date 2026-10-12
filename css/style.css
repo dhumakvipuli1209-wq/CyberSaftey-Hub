@@ -133,3 +133,60 @@ footer { text-align: center; background: var(--navy); color: #dce6ff; padding: 2
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+
+/* Distinct visual identities for each learning section */
+body.theme-crimes { --blue: #e85d3f; --cyan: #ffbd69; --page: #fff7f3; --line: #f5d9ce; }
+body.theme-crimes { background-image: radial-gradient(circle at 8% 8%, rgba(255,140,105,.16), transparent 26rem), radial-gradient(circle at 92% 35%, rgba(232,93,63,.09), transparent 28rem); }
+body.theme-crimes .page-header, body.theme-crimes .page-title { background: linear-gradient(125deg, #fff0e8, #ffe0d2); border-color: #f5c6b4; }
+body.theme-crimes .card { border-radius: 8px 22px 22px 22px; box-shadow: 0 10px 0 rgba(232,93,63,.07), 0 12px 28px rgba(120,54,35,.07); }
+body.theme-crimes .card::before { height: 6px; background: linear-gradient(90deg, #e85d3f, #ffbd69); }
+
+body.theme-prevention { --blue: #16845b; --cyan: #71d6a7; --page: #f1fbf5; --line: #d5eee0; }
+body.theme-prevention { background-image: radial-gradient(circle at 12% 8%, rgba(113,214,167,.18), transparent 26rem), radial-gradient(circle at 90% 40%, rgba(22,132,91,.08), transparent 28rem); }
+body.theme-prevention .page-header, body.theme-prevention .page-title { background: linear-gradient(130deg, #e3f9eb, #d4f2e4); border-color: #c7e9d6; }
+body.theme-prevention .card { border-radius: 24px 24px 24px 7px; background: #fbfffc; }
+body.theme-prevention .card::before { left: 18px; right: auto; top: 18px; width: 38px; height: 5px; border-radius: 10px; background: #16845b; }
+body.theme-prevention .card h3 { padding-top: 10px; }
+
+body.theme-scams { --blue: #c02654; --cyan: #ff9aab; --page: #fff4f6; --line: #f4d4de; }
+body.theme-scams { background-image: radial-gradient(circle at 8% 8%, rgba(255,154,171,.16), transparent 26rem), radial-gradient(circle at 92% 35%, rgba(192,38,84,.08), transparent 28rem); }
+body.theme-scams .page-header, body.theme-scams .page-title { background: linear-gradient(130deg, #ffe8ee, #fbd5e0); border-color: #f0c0d0; }
+body.theme-scams .card { border: 1px solid #f0c6d3; border-left: 5px solid #c02654; border-radius: 14px; }
+body.theme-scams .card::before { display: none; }
+body.theme-scams .warning { background: #fff0d9; border-left: 3px solid #ef9a28; }
+body.theme-scams .safe { background: #e7f8ef; border-left: 3px solid #20a46b; }
+
+body.theme-game { --blue: #7c5cff; --cyan: #46e7d5; --page: #0b1024; --line: #29335b; --ink: #f2f5ff; --muted: #b2bddc; --navy: #111936; --navy-2: #dce5ff; --surface: #151d3a; --shadow: 0 24px 65px rgba(0,0,0,.28); }
+body.theme-game { background-color: #0b1024; background-image: radial-gradient(circle at 10% 20%, rgba(124,92,255,.2), transparent 28rem), radial-gradient(circle at 90% 55%, rgba(70,231,213,.11), transparent 30rem); color: #f2f5ff; }
+body.theme-game .navbar { background: rgba(7,11,28,.97); border-bottom: 1px solid #29335b; }
+body.theme-game .page-header { background: linear-gradient(130deg, #17153b, #102e45); border-color: #29335b; }
+body.theme-game .page-header h2 { color: #f4f1ff; }
+body.theme-game .page-header p { color: #c2c9e7; }
+body.theme-game .question-box { position: relative; background: linear-gradient(145deg, #171d3c, #11182f); border: 1px solid #38416c; border-radius: 26px; box-shadow: 0 0 0 1px rgba(124,92,255,.12), 0 25px 70px rgba(0,0,0,.35); }
+body.theme-game .question-box::before { content: "MISSION CARD"; display: inline-block; padding: 5px 10px; border-radius: 7px; background: rgba(124,92,255,.18); color: #b9adff; font-size: .72rem; font-weight: 900; letter-spacing: .14em; }
+body.theme-game .question-box h3 { color: #f5f4ff; font-size: clamp(1.2rem, 2.5vw, 1.55rem); }
+body.theme-game #score { display: inline-block; float: right; color: #46e7d5; padding: 5px 10px; border: 1px solid #2e666c; border-radius: 999px; }
+body.theme-game #options button { background: #20294b; border-color: #39456f; color: #f0f3ff; border-radius: 13px; padding: 15px 17px; }
+body.theme-game #options button:hover { background: #2b3560; border-color: #8e7bff; }
+body.theme-game #options button:disabled { opacity: .62; }
+body.theme-game .result { background: #20294b; color: #dbe4ff; border: 1px solid #39456f; }
+body.theme-game .btn { background: linear-gradient(135deg, #7c5cff, #3e9dff); }
+
+body.theme-quiz { --blue: #087e8b; --cyan: #51d6c7; --page: #effbfc; --line: #cfecef; }
+body.theme-quiz { background-image: radial-gradient(circle at 10% 10%, rgba(81,214,199,.17), transparent 26rem), radial-gradient(circle at 90% 35%, rgba(8,126,139,.08), transparent 28rem); }
+body.theme-quiz .page-header { background: linear-gradient(130deg, #d9f8f4, #dceffb); border-color: #c4e8e8; }
+body.theme-quiz .question-box { border-top: 6px solid #087e8b; border-radius: 10px 10px 24px 24px; }
+body.theme-quiz #quizOptions button { background: #f0fbfa; border-color: #c9e9e6; }
+body.theme-quiz #quizOptions button:hover { background: #dff7f3; border-color: #58bfb6; }
+
+body.theme-workshop { --blue: #7848b8; --cyan: #e2a7ff; --page: #f8f3ff; --line: #e6d8f6; }
+body.theme-workshop { background-image: radial-gradient(circle at 10% 10%, rgba(226,167,255,.18), transparent 26rem), radial-gradient(circle at 90% 35%, rgba(120,72,184,.08), transparent 28rem); }
+body.theme-workshop .page-header { background: linear-gradient(130deg, #f0e4ff, #e4e9ff); border-color: #dfd0f3; }
+body.theme-workshop .card { background: linear-gradient(145deg, #fff, #fbf7ff); border-radius: 22px 8px 22px 8px; }
+body.theme-workshop .card::before { background: linear-gradient(90deg, #7848b8, #e2a7ff); height: 5px; }
+
+@media (max-width: 760px) {
+  body.theme-game .question-box { margin-top: 22px; }
+  body.theme-game #score { float: none; display: table; margin-top: 12px; }
+}
